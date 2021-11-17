@@ -3,4 +3,5 @@ jdk:
   - openjdk11
 before_install:
   - chmod +x mvnw
-  - $TRAVIS_BUILD_DIR=$TRAVIS_BUILD_DIR/PontoInteligente1
+before_script:
+  - cd PontoInteligente1
