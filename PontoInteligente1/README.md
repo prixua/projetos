@@ -1,3 +1,5 @@
+[![Build Status](https://app.travis-ci.com/prixua/projetos.svg?branch=master)](https://app.travis-ci.com/prixua/projetos)
+
 # API Ponto Inteligente
 
 
