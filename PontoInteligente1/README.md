@@ -8,4 +8,10 @@
 ##### Escopo
 
  - Utilização do Spring Boot
+ - JPA
+ - Banco MariaDB 10.4 com HeidiSQL
+ - Integração continua com TravisCI
+ - Controle de *migrations* com Flyway
+ - Utilização de testes Unitários (JUNIT)
+ - Utilização do pacote Mockito
  
