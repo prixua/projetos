@@ -51,7 +51,7 @@ public class LancamentoController {
 	@Autowired
 	private FuncionarioService funcionarioService;
 	
-	@Value("${paginacao.qtd_por_pagina}")
+	@Value("${paginacao.qtd_por_pagina}") //busca valor do application.properties
 	private int qtdPorPagina;
 
 	public LancamentoController() {

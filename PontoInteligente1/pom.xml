@@ -72,8 +72,6 @@
 			<artifactId>spring-security-test</artifactId>
 		</dependency>
 
-
-
 		<!--  Hibernate validator -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -85,6 +83,18 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+
+
+		<!--Teste-->
+		<!-- https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream -->
+		<dependency>
+			<groupId>com.thoughtworks.xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<version>1.4.18</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>

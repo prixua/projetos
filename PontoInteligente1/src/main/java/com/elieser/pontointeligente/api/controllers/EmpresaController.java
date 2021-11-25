@@ -1,5 +1,7 @@
 package com.elieser.pontointeligente.api.controllers;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import org.slf4j.Logger;
@@ -53,6 +55,27 @@ public class EmpresaController {
 	}
 
 	/**
+	 * Retorna todas as empresas.
+	 *
+	 * @return ResponseEntity<Response<List<EmpresaDto>>>
+	 */
+	@GetMapping(value = "/")
+	public ResponseEntity<Response<List<EmpresaDto>>> buscarEmpresas() {
+		log.info("Buscando todas as empresas");
+		Response<List<EmpresaDto>> response = new Response<List<EmpresaDto>>();
+		Optional<List<Empresa>> empresas = empresaService.buscarEmpresas();
+
+		if (!empresas.isPresent()) {
+			log.info("Nenhuma empresa encontrada.");
+			response.getErrors().add("Nenhuma empresa encontrada");
+			return ResponseEntity.badRequest().body(response);
+		}
+
+		response.setData(this.converterListaEmpresaDto(empresas.get()));
+		return ResponseEntity.ok(response);
+	}
+
+	/**
 	 * Popula um DTO com os dados de uma empresa.
 	 * 
 	 * @param empresa
@@ -65,6 +88,12 @@ public class EmpresaController {
 		empresaDto.setRazaoSocial(empresa.getRazaoSocial());
 
 		return empresaDto;
+	}
+
+	private List<EmpresaDto> converterListaEmpresaDto(List<Empresa> empresas){
+		List<EmpresaDto> empresasDtos = new ArrayList<>();
+		empresas.forEach(empresa -> empresasDtos.add(converterEmpresaDto(empresa)));
+		return empresasDtos;
 	}
 
 }

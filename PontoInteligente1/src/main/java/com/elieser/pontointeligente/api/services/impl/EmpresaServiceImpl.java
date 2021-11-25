@@ -1,5 +1,6 @@
 package com.elieser.pontointeligente.api.services.impl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.slf4j.Logger;
@@ -29,6 +30,12 @@ public class EmpresaServiceImpl implements EmpresaService {
 	public Empresa persistir(Empresa empresa) {
 		log.info("Persistindo empresa: {}", empresa);
 		return this.empresaRepository.save(empresa);
+	}
+
+	@Override
+	public Optional<List<Empresa>> buscarEmpresas() {
+		log.info("Buscando todas as empresas");
+		return Optional.ofNullable(empresaRepository.findAll());
 	}
 
 }
