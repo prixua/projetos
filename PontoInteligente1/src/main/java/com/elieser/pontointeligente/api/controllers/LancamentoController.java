@@ -177,7 +177,7 @@ public class LancamentoController {
 		}
 
 		this.lancamentoService.remover(id);
-		return ResponseEntity.ok(new Response<String>());
+		return ResponseEntity.ok(new Response<String>("Removido lançamento de id "+id));
 	}
 
 	/**
