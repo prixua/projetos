@@ -3,7 +3,7 @@
 # API Ponto Inteligente
 
 
-** Api didática para o curso de Spring Boot do Marcio Kazale realizado pela Udemy **
+** Api didática para o curso de Spring Boot do Marcio elieser realizado pela Udemy **
 
 ##### Escopo
 

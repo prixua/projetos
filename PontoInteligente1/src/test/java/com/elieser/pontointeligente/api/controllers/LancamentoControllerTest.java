@@ -99,7 +99,7 @@ public class LancamentoControllerTest {
 	 * Método desabilitado em possível razão da subscrição da classe WebSecurityConfig, que permite
 	 * o uso dos endpoints sem solicitar permissão
 	 */
-/*	@Test
+	@Test
 	@WithMockUser
 	public void testRemoverLancamentoAcessoNegado() throws Exception {
 		BDDMockito.given(this.lancamentoService.buscarPorId(Mockito.anyLong())).willReturn(Optional.of(new Lancamento()));
@@ -107,7 +107,7 @@ public class LancamentoControllerTest {
 		mvc.perform(MockMvcRequestBuilders.delete(URL_BASE + ID_LANCAMENTO)
 				.accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isForbidden());
-	}*/
+	}
 
 	private String obterJsonRequisicaoPost() throws JsonProcessingException {
 		LancamentoDto lancamentoDto = new LancamentoDto();

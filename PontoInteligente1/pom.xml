@@ -85,8 +85,34 @@
 		</dependency>
 
 
+		<!-- JWT Token -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.7.0</version>
+		</dependency>
 
-		<!--Teste-->
+		<!-- Swagger e Swagger UI -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+
+		<!-- EhCache -->
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+		</dependency>
+
+
+		<!-- Conversão Objeto em String XML (Usado apenas para teste )-->
 		<!-- https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream -->
 		<dependency>
 			<groupId>com.thoughtworks.xstream</groupId>
